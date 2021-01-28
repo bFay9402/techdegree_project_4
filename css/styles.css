@@ -376,28 +376,7 @@ a {
   border-radius: 5px;
 }
 
-.nav {
-  padding-left: 0;
-  flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-link {
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px 0;
-  display: block;
-  width: 100%;
-  transition: background-color .2s ease-in-out,  color .2s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #fff;
-  background-color: #58E1C1;
-}
-
-.btn {
+.default {
   margin-top: 15px;
   width: 100%;
   color: #fff;
@@ -405,26 +384,71 @@ a {
   padding: 10px 0;
   text-transform: uppercase;
   border-radius: 5px;
-}
-
-.default {
   background-color: #51DDFC;
 }
 
+.default:hover {
+  background-color: #83e7fd;
+}
+
 .error {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
   background-color: #E4757A;
 }
 
+.error:hover {
+  background-color: #eca0a3;
+}
+
 .info {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
   background-color: #927BC1;
 }
 
+.info:hover {
+  background-color: #af9ed1;
+}
+
 .success {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
   background-color: #63CC82;
 }
 
+.success:hover {
+  background-color: #89d9a1;
+}
+
 .warning {
+  margin-top: 15px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
   background-color: #FD7856;
+}
+
+.warning:hover {
+  background-color: #fea088;
 }
 
 .form {
@@ -447,6 +471,27 @@ a {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.nav {
+  padding-left: 0;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  transition: background-color .2s ease-in-out,  color .2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background-color: #58E1C1;
 }
 
 .img-avatar {
@@ -493,54 +538,134 @@ a {
 }
 
 .theme.col-1 {
-  background-color: #927bc1;
+  background-color: #927BC1;
 }
 
 .theme.col-2 {
-  background-color: #fd7856;
+  background-color: #FD7856;
 }
 
 .theme.col-3 {
-  background-color: #deb2ee;
+  background-color: #bdafd9;
 }
 
 .theme.col-4 {
-  background-color: #7ee6fd;
+  background-color: #83e7fd;
 }
 
 .theme.col-5 {
-  background-color: #88d9a0;
+  background-color: #89d9a1;
 }
 
 .theme.col-6 {
-  background-color: #4da2bb;
+  background-color: #04bbe3;
 }
 
 .theme.col-7 {
-  background-color: #ec9fa3;
+  background-color: #eca0a3;
 }
 
 .theme.col-8 {
-  background-color: #fd9f85;
+  background-color: #fea088;
 }
 
 .theme.col-9 {
-  background-color: #e4757a;
+  background-color: #E4757A;
 }
 
 .theme.col-10 {
-  background-color: #63cc82;
+  background-color: #63CC82;
 }
 
 .theme.col-11 {
-  background-color: #51ddfc;
+  background-color: #51DDFC;
 }
 
 .theme.col-12 {
-  background-color: #80e8d1;
+  background-color: #83e9d1;
 }
 
 .card {
   flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row {
+    flex-direction: row;
+  }
+  [class^=col] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
+  .col-1 {
+    flex-basis: 8.33%;
+  }
+  .col-2 {
+    flex-basis: 16.67%;
+  }
+  .col-3 {
+    flex-basis: 25.00%;
+  }
+  .col-4 {
+    flex-basis: 33.33%;
+  }
+  .col-5 {
+    flex-basis: 41.67%;
+  }
+  .col-6 {
+    flex-basis: 50.00%;
+  }
+  .col-7 {
+    flex-basis: 58.33%;
+  }
+  .col-8 {
+    flex-basis: 66.67%;
+  }
+  .col-9 {
+    flex-basis: 75.00%;
+  }
+  .col-10 {
+    flex-basis: 83.33%;
+  }
+  .col-11 {
+    flex-basis: 91.67%;
+  }
+  .col-12 {
+    flex-basis: 100%;
+  }
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-link {
+    flex-basis: 100px;
+  }
+  .btn {
+    padding: 10px 30px;
+  }
+  .btn + .btn {
+    margin-left: 10px;
+  }
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

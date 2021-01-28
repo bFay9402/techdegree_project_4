@@ -1,23 +1,39 @@
-.btn {
-  @include btn;
-}
-
 .default {
+  @include base-btn;
   background-color: $color-default;
+  &:hover {
+    background-color: lighten($color-default, 10%);
+  }
 }
 
 .error {
+  @include base-btn;
   background-color: $color-error;
+  &:hover {
+    background-color: lighten($color-error, 10%);
+  }
 }
 
 .info {
+  @include base-btn;
   background-color: $color-info;
+  &:hover {
+    background-color: lighten($color-info, 10%);
+  }
 }
 
 .success {
+  @include base-btn;
   background-color: $color-success;
+  &:hover {
+    background-color: lighten($color-success, 10%);
+  }
 }
 
 .warning {
+  @include base-btn;
   background-color: $color-warning;
+  &:hover {
+    background-color: lighten($color-warning, 10%);
+  }
 }
